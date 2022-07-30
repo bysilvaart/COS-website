@@ -73,8 +73,10 @@ p{
 .web_container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100vw;
     max-width: var(--container-width);
+
 }
 
 .navbar{
@@ -385,14 +387,27 @@ p{
 
 footer{
     display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: #F0FFFF;
+    overflow: visible;
+    padding: 20px 0;
+}
+
+.footer-container{
+    width: 100%;
+    max-width: var(--container-width);
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px 0px;
     gap: 40px;
+
 }
 
 footer .logo-footer{
     height: 70px;
+    
 }
 
 .social-media__container{
