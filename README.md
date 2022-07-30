@@ -1,5 +1,5 @@
-# sanjorgewebsite
-Sitio web de la clinica dental san jorge
+# COS
+Sitio web del Centro Oftalmológico del Sur
 
 Link:
-https://bysilvaart.github.io/sanjorgewebsite/
+https://bysilvaart.github.io/COS-website/
