@@ -13,7 +13,9 @@
     --border-mobile: 16px;
     --primary: #10A0A0;
     --primary-300: #089191;
+    --primary-700: #74F1F1;
     --grey: #3B4449;
+    --border-green: #D3F4F4;
 }
 
 body{
@@ -80,6 +82,7 @@ p{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: var(--container-width);
 }
 
 .navbar .navbar-list{
@@ -141,7 +144,7 @@ p{
     background-size: cover;
     background-position: center;
     border-radius: var(--border-mobile);
-    border: 1px solid #FEEACD;
+    border: 1px solid var(--grey);
 }
 
 .banner-title{
@@ -174,13 +177,12 @@ p{
 }
 
 .section-02{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    display: flex;
 }
 
 .section-03{
     display: flex;
+    flex-direction: row-reverse;
     gap: 40px;
     width: 100%;
 }
@@ -191,11 +193,8 @@ p{
     gap: 10px;
 }
 
-.nosotros{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+
+
 .titulo-bajada{
     display: flex;
     flex-direction: column;
@@ -205,7 +204,53 @@ p{
 .titulo-naranja{
     color: #FF560B;
 }
-.servicios, .horario{
+
+.horario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    height: 94px;
+    background: var(--grey);
+    border: 1px solid #202020;
+    box-shadow: 0px 10px 20px rgba(16, 160, 160, 0.15);
+    border-radius: 16px;
+}
+
+.horario-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: max-content;
+}
+
+.logo-texto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+
+    width: auto;
+}
+
+.logo-texto img{
+    height: 50px;
+}
+
+.logo-texto p{
+    color: white;
+}
+
+.logo-texto h4{
+    color: var(--primary-700);
+    font-weight: 700;
+}
+.servicios{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -220,23 +265,52 @@ p{
     border-radius: var(--border);
 }
 
-/* grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
 .nosotros{
-    grid-area: 1 / 1 / 4 / 2;
-
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
 }
 
 .nosotros img{
     border-radius: var(--border-mobile);  
-    max-width: 450px;  
+    max-width: 480px;  
 }
 
-.horario{
-    grid-area: 1 / 2 / 2 / 3;
+.nosotros-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
 }
 
-.servicios{
-    grid-area: 2 / 2 / 3 / 3;
+.titulo-bajada h2{
+    color: var(--primary-300)
+}
+
+.atendidos{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.atendidos p{
+    color: var(--primary);
+    line-height: 16px;
+}
+
+.atendidos h2{
+    font-size: 40px;
+    line-height: 32px;
+    color: var(--grey);
+}
+
+.atendidos h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--grey);
 }
 
 .items-container{
@@ -271,7 +345,7 @@ p{
 
 .map{
     border-radius: var(--border-mobile);
-    border: 1px solid #FEEACD;
+    border: 1px solid var(--border-green);
     width: 100%;
 }
 
@@ -279,11 +353,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
     gap: 30px;
-    background: #FFFAF0;
-    border: 1px solid #FEEACD;
-    border-radius: var(--border);
     height: max-content;
 }
 
@@ -301,7 +371,7 @@ p{
     align-items: center;
     padding: 15px;
     background: #FFFFFF;
-    border: 1px solid #FEEACD;
+    border: 1px solid var(--border-green);
     border-radius: 10px;
 }
 
@@ -316,9 +386,13 @@ p{
 footer{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 40px 0px;
     gap: 40px;
+}
+
+footer .logo-footer{
+    height: 70px;
 }
 
 .social-media__container{
@@ -328,6 +402,7 @@ footer{
     align-items: flex-start;
     gap: 40px;
 }
+
 .follow-us__container{
     display: flex;
     flex-direction: column;
@@ -335,6 +410,7 @@ footer{
     align-items: flex-start;
     gap: 20px;
 }
+
 .social-media__icons{
     display: flex;
     justify-content: center;
@@ -373,7 +449,7 @@ footer{
     line-height: 16px;
     text-decoration: none;
     cursor: pointer;
-    width: auto;
+    width: max-content;
 }
 
 .primary-btn{
@@ -395,7 +471,7 @@ footer{
 }
 
 .alt-btn:hover{
-    background: #FFC8A6;
+    background: #E5FFFF;
 }
 
 .blue-text{
@@ -422,6 +498,10 @@ footer{
     }
     .section-02, .section-03{
         display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-list{
         flex-direction: column;
     }
 
