@@ -219,6 +219,7 @@ p{
     border: 1px solid #202020;
     box-shadow: 0px 10px 20px rgba(16, 160, 160, 0.15);
     border-radius: 16px;
+    width: 100%;
 }
 
 .horario-texto{
@@ -437,18 +438,41 @@ footer .logo-footer{
     text-decoration: none;
 }
 
-.phone-numbers__container, .numbers{
+.footer-creadores{
     display: flex;
     flex-direction: column;
+    gap: 8px;
+}
+
+.hecho-por{
+    display: flex;
+    gap: 4px;
+    
+}
+
+.primary-text{
+    color: var(--primary-300);
+    font-weight: 700;
+}
+
+.hecho-por a{
+    color: var(--grey);
+    text-decoration: none;
+}
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
+    padding: 0px;
+    gap: 30px;
 }
 
-.phone-numbers__container{
-    gap: 20px;
-}
-
-.numbers{
-    gap: 5px;
+.footer-info .detalle{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
 }
 
 .btn{
