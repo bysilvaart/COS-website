@@ -277,7 +277,7 @@ p{
 
 .nosotros img{
     border-radius: var(--border-mobile);  
-    max-width: 480px;  
+    width: 100%;  
 }
 
 .nosotros-texto{
@@ -577,6 +577,7 @@ footer .logo-footer{
 
     .nosotros{
         flex-direction: column;
+        width: 100%;
     }
 
     .nosotrs img{
@@ -585,6 +586,11 @@ footer .logo-footer{
     }
 
     .horario{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .horario .logo-texto{
         flex-direction: column;
     }
 
@@ -603,8 +609,12 @@ footer .logo-footer{
         padding: var(--padding-mobile-lg);
     }
 
-    footer{
-        flex-direction: column-reverse;
+    .contactanos{
+        padding: var(--padding-mobile-lg);
+    }
+
+    footer, .footer-container{
+        flex-direction: column;
         align-items: center;
         padding: var(--padding-mobile-lg);
 
