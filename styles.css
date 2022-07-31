@@ -575,9 +575,17 @@ footer .logo-footer{
         padding: var(--padding-mobile-lg);
     }
 
+    .nosotros{
+        flex-direction: column;
+    }
+
     .nosotrs img{
         border: var(--border-mobile);
         max-width: 450px;
+    }
+
+    .horario{
+        flex-direction: column;
     }
 
     .horario a{
