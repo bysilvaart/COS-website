@@ -7,22 +7,28 @@
     <meta name="Description" content="Dental San Jorge es una clínica dental ubicada en Curicó, cuenta con los mejores dentistas y los mejores precios ">
     <meta name="robots">
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Centro Oftalmológico del Sur</title>
 </head>
 <body>
 
     <div class="web_container">
 
-        <div class="navbar">
-            <div class="navbar_logo-container">
+        <div class="navbar" id="myNavbar">
+            <div class="navbar_logo-container active">
                 <img src="img/logo-cos__01.svg" alt="">
             </div>
             <div class="navbar-list">
-                <a href="https://wa.me/56957716313" class="btn primary-btn">Agendar</a>
-                <a href="#" class="primary-color-text">Nosotros</a>
-                <a href="#" class="primary-color-text">Servicios</a>
-                <a href="#" class="primary-color-text">Ubicación</a>
-                <a href="#" class="primary-color-text">Contacto</a>
+                <a href="https://wa.me/56957716313" target="_blank" class="btn primary-btn active">Agendar</a>
+                <a href="#nosotros" class="primary-color-text" target="_self">Nosotros</a>
+                <a href="#servicios" class="primary-color-text">Servicios</a>
+                <a href="#ubicacion" class="primary-color-text">Ubicación</a>
+                <a href="#contacto" class="primary-color-text">Contacto</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </div>
         
@@ -54,7 +60,7 @@
         </div>
     
         <div class="section section-02">
-            <div id="nosotros" class="nosotros">
+            <section id="nosotros" class="nosotros">
                 <img src="img/about-us.jpg" alt="">
                 <div class="nosotros-texto">
                     <div class="titulo-bajada">
@@ -74,12 +80,12 @@
                         <p>ATENDIDOS</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </div>
     
         <div class="section section-03">
-            <div id="ubicacion" class="visitanos">
+            <section id="ubicacion" class="visitanos">
                 <div class="titulo-bajada">
                     <h2 class="titulo-naranja">Visítanos</h2>
                     <p>Estamos ubicados en <b>Manuel Jarpa 344.</b>
@@ -89,8 +95,8 @@
                 </div>
                 <img src="img/map.jpg" class="map" alt="">
                 <a href="https://goo.gl/maps/TvEWHaiCE6zpbP736" target="_blank" class="btn alt-btn">Ver en Google Maps<img src="img/arrow-right.svg" alt=""></a>
-            </div>
-            <div id="contacto" class="contactanos">
+            </section>
+            <section id="contacto" class="contactanos">
                 <div class="titulo-bajada">
                     <h2 class="titulo-naranja">Contáctanos</h2>
                     <div>
@@ -105,7 +111,7 @@
                     <input type="text-area" name="" id="" placeholder="Escribe tu mensaje aquí" class="text-area">
                     <input type="submit" name="" id="" value="Enviar correo" class="primary-btn btn">
                 </form>
-            </div>
+            </section>
         </div>
 
         <footer>
@@ -147,5 +153,19 @@
         </footer>
 
     </div>
+
+    <script>
+        // NAVBAR RESPONSIVE //
+        function myFunction() {
+          var x = document.getElementById("myNavbar");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }
+        }
+        // FIN NAVBAR RESPONSIVE //
+    </script>
+
 </body>
 </html>

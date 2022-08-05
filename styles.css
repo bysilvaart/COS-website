@@ -18,6 +18,10 @@
     --border-green: #D3F4F4;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
     background-color: #FFF;
@@ -85,6 +89,11 @@ p{
     align-items: center;
     width: 100%;
     max-width: var(--container-width);
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+    padding: 10px 0px;
 }
 
 .navbar .navbar-list{
@@ -137,16 +146,15 @@ p{
 .banner{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding: 30px 15px;
+    padding-top: 32px;
     gap: 45px;
     height: 450px;
     background: radial-gradient(100% 100% at 50% 100%, rgba(59, 68, 72, 0.85) 0%, rgba(59, 68, 72, 0.6) 55.6%, rgba(59, 68, 72, 0.15) 100%), url("img/banner.jpg");
     background-size: cover;
     background-position: center;
     border-radius: var(--border-mobile);
-    border: 1px solid var(--grey);
 }
 
 .banner-title{
@@ -171,11 +179,15 @@ p{
 .banner_buttons .primary-btn{
     width: 100%;
 }
+section{
+    scroll-margin-top: 120px;
+}
 
 .section-01{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding-top: 80px !important;
 }
 
 .section-02{
@@ -187,6 +199,7 @@ p{
     flex-direction: row-reverse;
     gap: 40px;
     width: 100%;
+    padding-bottom: 120px !important;
 }
 
 .agenda{
@@ -194,6 +207,7 @@ p{
     flex-direction: column;
     gap: 10px;
 }
+
 
 
 
@@ -217,7 +231,7 @@ p{
     height: 94px;
     background: var(--grey);
     border: 1px solid #202020;
-    box-shadow: 0px 10px 20px rgba(16, 160, 160, 0.15);
+    /* box-shadow: 0px 10px 20px rgba(16, 160, 160, 0.15); */
     border-radius: 16px;
     width: 100%;
 }
@@ -275,6 +289,8 @@ p{
     gap: 40px;
 }
 
+
+  
 .nosotros img{
     border-radius: var(--border-mobile);  
     width: 100%;  
@@ -517,6 +533,14 @@ footer .logo-footer{
     color: #3A3A8B;
 }
 
+.navbar .icon {
+    display: none;
+    width: 48px;
+    height: 48px;
+    background-color: var(--grey);
+    border-radius: 8px;
+}
+
 @media (max-width: 500px){
     :root{
         --border: 0px;
@@ -585,6 +609,10 @@ footer .logo-footer{
         max-width: 450px;
     }
 
+    .nosotros-texto{
+        gap: 30px;
+    }
+
     .horario{
         flex-direction: column;
         height: auto;
@@ -598,6 +626,11 @@ footer .logo-footer{
         width: 100%;
     }
 
+    .horario-texto{
+        width: fit-content;
+        text-align: center;
+    }
+
     .items-container{
         flex-direction: column;
     }
@@ -609,17 +642,24 @@ footer .logo-footer{
         padding: var(--padding-mobile-lg);
     }
 
+    .visitanos, .ubicacion, .nosotros{
+        padding: 0px 16px;
+    }
+
     .contactanos{
         padding: var(--padding-mobile-lg);
     }
 
     footer, .footer-container{
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding: var(--padding-mobile-lg);
 
     }
 
+    .footer-info, .detalle, .footer-creadores{
+        align-items: center;
+    }
     .follow-us__container, .phone-numbers__container{
         gap: 15px;
     }
@@ -627,4 +667,39 @@ footer .logo-footer{
     .phone-numbers__container, .numbers, .social-media__container, .follow-us__container{
         align-items: center;
     }
+
+    .navbar{
+        padding: 16px;
+    }
+
+    .navbar-list{
+        flex-direction: row;
+        gap: 10px !important;
+        padding: 0px !important;
+    }
+
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: grid;
+      place-content: center;
+      text-decoration: none;
+      color: white;
+    }
+        
+    
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
 }
+
+
+
