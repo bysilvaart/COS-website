@@ -16,7 +16,7 @@
 
     <div class="web_container">
 
-        <div class="navbar" id="myNavbar">
+        <header class="navbar" id="myNavbar">
             <div class="navbar_logo-container active">
                 <img src="img/logo-cos__01.svg" alt="">
             </div>
@@ -30,7 +30,7 @@
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-        </div>
+        </header>
         
         <div class="section section-01">
             
@@ -154,7 +154,7 @@
 
     </div>
 
-    <script>
+    <script type="text/javascript">
         // NAVBAR RESPONSIVE //
         function myFunction() {
           var x = document.getElementById("myNavbar");
@@ -165,6 +165,11 @@
           }
         }
         // FIN NAVBAR RESPONSIVE //
+
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
     </script>
 
 </body>
