@@ -119,7 +119,6 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     gap: 40px;
     height: 60px;
 
@@ -608,6 +607,10 @@ background-color: #128C7E;;
     border-radius: 8px;
 }
 
+.boton-agendar{
+    display: none;
+}
+
 @media (max-width: 500px){
     :root{
         --border: 0px;
@@ -755,6 +758,18 @@ background-color: #128C7E;;
         gap: 10px !important;
         padding: 0px !important;
     }
+
+    .boton-agendar{
+        display: grid;
+        place-content: center;
+        width: 100%;
+        padding: 10px;
+        /* background-color: white; */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+    
 /* 
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
