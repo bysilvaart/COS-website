@@ -18,10 +18,10 @@
 
         <header class="navbar" id="myNavbar">
             <div class="navbar_logo-container active">
-                <img src="img/logo-cos__01.svg" alt="">
+                <img src="img/logo_lg.gif" alt="">
             </div>
             <div class="navbar-list">
-                <a href="https://wa.me/56957716313" target="_blank" class="btn primary-btn active">Agendar</a>
+                <a href="https://wa.me/56957716313" target="_blank" class="btn whatsapp-btn active"><img src="img/whatsapp.svg" alt="">Agendar</a>
                 <a href="#nosotros" class="primary-color-text" target="_self">Nosotros</a>
                 <a href="#servicios" class="primary-color-text">Servicios</a>
                 <a href="#ubicacion" class="primary-color-text">Ubicación</a>
@@ -34,16 +34,32 @@
         
         <div class="section section-01">
             
+            <div class="banner_container">
 
-            <div class="banner">
-                <div class="banner-title">
-                    <img src="img/logo-cos__02.svg" alt="">
-                    <h1>Somos el <b>primer centro oftalmológico</b> de la provincia de <b>Malleco</b></h1>
+                <div class="mySlides banner_1">
+                    <img src="img/logo-cos__blanco.svg" class="logo-blanco" alt="">
+                    <div class="banner-title">
+                        <h1>Centro Oftalmológico del Sur</h1>
+                        <h3>Cuida tu salud visual en manos de médicos expertos</h3>
+                    </div>
                 </div>
-                <div class="banner_buttons">
-                    <a href="https://wa.me/56957716313" class="btn primary-btn"><img src="img/icon-wa.svg" alt="">Escríbenos para agendar</a>
-                    <a href="tel:56957716313" class="btn alt-btn"><img src="img/icon-phone.svg" alt="">Llámanos</a>
+
+                <div class="mySlides banner_2">
+                    <img src="img/logo-cos__blanco.svg" class="logo-blanco" alt="">
+                    <div class="banner-title">
+                        <h1>Agenda tu chequeo visual</h1>
+                        <h3>Somos el primer centro oftalmológico de la provincia de Malleco</h3>
+                    </div>
                 </div>
+
+                <div class="mySlides banner_3">
+                    <img src="img/logo-cos__blanco.svg" class="logo-blanco" alt="">
+                    <div class="banner-title">
+                        <h1>Operación Lasik</h1>
+                        <h3>Di #ChaoLentes y olvídate de lentes rotos, empañados o perdidos</h3>
+                    </div>
+                </div>
+                
             </div>
 
             <div class="horario">
@@ -61,7 +77,7 @@
     
         <div class="section section-02">
             <section id="nosotros" class="nosotros">
-                <img src="img/about-us.jpg" alt="">
+                <img src="img/about_us.png" alt="">
                 <div class="nosotros-texto">
                     <div class="titulo-bajada">
                         <h2>Acerca de nosotros</h2>
@@ -170,6 +186,22 @@
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0)
         })
+
+
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "flex";
+        setTimeout(carousel, 4000); // Change image every 4 seconds
+        }
     </script>
 
 </body>

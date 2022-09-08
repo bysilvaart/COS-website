@@ -36,11 +36,12 @@ body{
 }
 
 h1{
-    font-size: 28px;
-    line-height: 28px;
-    font-weight: 400;
+    font-size: 48px;
+    line-height: 40px;
+    font-weight: 700;
 
 }
+
 
 h2{
     font-size: 26px;
@@ -137,7 +138,7 @@ p{
 }
 
 .navbar_logo-container img{
-    height: 50px;
+    height: 60px;
     transition: 0.6s;
 
 }
@@ -163,18 +164,34 @@ p{
     padding: 40px 0;
 }
 
-.banner{
+.banner_container{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.banner_1, .banner_2, .banner_3{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 32px;
+    padding: 15px;
     gap: 45px;
     height: 450px;
-    background: radial-gradient(100% 100% at 50% 100%, rgba(59, 68, 72, 0.85) 0%, rgba(59, 68, 72, 0.6) 55.6%, rgba(59, 68, 72, 0.15) 100%), url("img/banner.jpg");
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center !important;
     border-radius: var(--border-mobile);
+}
+
+.banner_1{
+    background: url("img/Banner-imagen-01.png");
+}
+.banner_2{
+    background: url("img/Banner-imagen-02.png");
+}
+.banner_3{
+    background: url("img/Banner-imagen-03.png");
 }
 
 .banner-title{
@@ -182,12 +199,27 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 15px;
     text-align: center;
 
-    width: 520px;
+    width: auto;
     color: white;
 }
+
+.banner-title h3{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.logo-blanco{
+    width: 50px;
+    height: min-content;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
 
 .banner_buttons{
     display: flex;
@@ -536,6 +568,19 @@ footer .logo-footer{
     filter: drop-shadow(0px 10px 25px rgba(16, 160, 160, 0.2));
 }
 
+.whatsapp-btn{
+    background-color: #25D366;
+    color: #FFFFFF;
+    border: none ;
+    filter: drop-shadow(0px 10px 25px rgba(16, 160, 160, 0.2));
+}
+
+.whatsapp-btn:hover{
+background-color: #128C7E;;
+}
+
+
+
 .primary-btn:hover{
     background: var(--primary-300);
 }
@@ -570,6 +615,13 @@ footer .logo-footer{
         --padding-mobile: 15px;
         --padding-mobile-lg: 40px 15px;
         --border-mobile: 15px;
+    }
+
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 700;
+    
     }
 
     h2{
@@ -694,16 +746,20 @@ footer .logo-footer{
         padding: 16px;
     }
 
+    header{
+        justify-content: center !important;
+    }
     .navbar-list{
+        display: none !important;
         flex-direction: row;
         gap: 10px !important;
         padding: 0px !important;
     }
-
+/* 
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
       float: right;
-      display: grid;
+      display: none;
       place-content: center;
       text-decoration: none;
       color: white;
@@ -720,7 +776,7 @@ footer .logo-footer{
       float: none;
       display: block;
       text-align: left;
-    }
+    } */
 }
 
 
