@@ -611,6 +611,42 @@ background-color: #128C7E;;
     display: none;
 }
 
+.icon_chevron-left, .icon_chevron-right{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: calc(50% - 24px);
+    display: grid;
+    place-content: center;
+    border-radius: 15px;
+    border: none;
+    background-color: #08919180;
+    cursor: pointer;
+    
+
+}
+
+.icon_chevron-left>img, .icon_chevron-right>img{
+    width: 48px;
+    height: 48px;
+    color: white;
+}
+
+.icon_chevron-right{
+    transform: rotate(180deg);
+    right: 15px;
+}
+
+.icon_chevron-left{
+    left: 15px;
+}
+
+.icon_chevron-left:hover, .icon_chevron-right:hover{
+    background-color: #089191f1;
+}
+
+
+
 @media (max-width: 500px){
     :root{
         --border: 0px;
@@ -768,6 +804,10 @@ background-color: #128C7E;;
         position: fixed;
         bottom: 0;
         left: 0;
+    }
+
+    .icon_chevron-left, .icon_chevron-right{
+        top: calc(90% - 24px);
     }
     
 /* 

@@ -35,6 +35,8 @@
         <div class="section section-01">
             
             <div class="banner_container">
+                <button class="icon_chevron-left" onclick="plusDivs(-1)"><img  src="img/chevron.svg" alt=""></button>
+                <button class="icon_chevron-right" onclick="plusDivs(+1)"><img  src="img/chevron.svg" alt=""></button>
 
                 <div class="mySlides banner_1">
                     <img src="img/logo-cos__blanco.svg" class="logo-blanco" alt="">
@@ -192,20 +194,40 @@
         })
 
 
-        var slideIndex = 0;
-        carousel();
+        var slideIndex = 1;
+        showDivs(slideIndex);
 
-        function carousel() {
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
-        slideIndex++;
-        if (slideIndex > x.length) {slideIndex = 1}
         x[slideIndex-1].style.display = "flex";
-        setTimeout(carousel, 4000); // Change image every 4 seconds
         }
+
+
+        // var slideIndex = 0;
+        // carousel();
+
+        // function carousel() {
+        // var i;
+        // var x = document.getElementsByClassName("mySlides");
+        // for (i = 0; i < x.length; i++) {
+        //     x[i].style.display = "none";
+        // }
+        // slideIndex++;
+        // if (slideIndex > x.length) {slideIndex = 1}
+        // x[slideIndex-1].style.display = "flex";
+        // setTimeout(carousel, 4000); // Change image every 4 seconds
+        // }
+
     </script>
 
 </body>
