@@ -318,19 +318,45 @@ section{
     color: var(--primary-700);
     font-weight: 700;
 }
-.servicios{
+.servicios_container{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 30px;
-    gap: 30px;
-    height: auto;
-    color: #FFFAF0;
+    gap: 15px;
+    width: 100%;
+    
+}
 
-    /* gradiente/primario */
+.servicios_container h2{
+    color: var(--primary-300);
+}
 
-    background: radial-gradient(100% 100% at 19.83% 0%, #FF340B 0%, #FF990B 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    border-radius: var(--border);
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 45px;
+    row-gap: 15px;
+    
+}
+
+
+.servicios .item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background-color: #D3F4F4;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.servicios .item p{
+    font-weight: 700;
+    color: var(--grey);
+}
+
+.servicios .item img{
+    width: 60px;
 }
 
 .nosotros{
@@ -339,6 +365,7 @@ section{
     padding: 0px;
     gap: 40px;
 }
+
 
 
   
@@ -353,6 +380,33 @@ section{
     justify-content: space-between;
     align-items: flex-start;
     height: 100%;
+}
+
+.mision__container{
+    display: flex;
+    gap: 20px;
+}
+
+.mision__container h3{
+    color: var(--primary-300);
+}
+
+.mision, .vision, .valores{
+    background-color: #F0FFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: var(--border-mobile);
+    border: 1px solid var(--border-green);
+}
+
+.valores ul{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .titulo-bajada h2{
@@ -810,6 +864,29 @@ background-color: #128C7E;;
         top: calc(90% - 24px);
     }
     
+    .mision__container{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .servicios{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .servicios_container{
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .servicios{
+        padding: 0;
+    }
+
+    .servicios .item{
+        padding: 5px 15px 5px 5px;
+    }
 /* 
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
