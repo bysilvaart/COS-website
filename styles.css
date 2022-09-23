@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
     
 }
 
@@ -342,18 +343,28 @@ section{
 .servicios .item{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 15px;
-    padding: 15px 20px;
-    background-color: #D3F4F4;
+    padding: 15px 10px 15px 20px;
+    /* background-color: #D3F4F4; */
+    background-color: white;
     width: 100%;
     border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(16, 160, 160, 0.15);
     
 }
 
-.servicios .item p{
+
+.servicios>.item>p{
     font-weight: 700;
     color: var(--grey);
 }
+
+.servicios .item p :after{
+    content: "hola";
+}
+
+
 
 .servicios .item img{
     width: 60px;
@@ -392,14 +403,15 @@ section{
 }
 
 .mision, .vision, .valores{
-    background-color: #F0FFFF;
+    /* background-color: #F0FFFF; */
+    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
     padding: 15px;
     border-radius: var(--border-mobile);
-    border: 1px solid var(--border-green);
+    border: 1px solid var(--primary);
 }
 
 .valores ul{
@@ -618,18 +630,23 @@ footer .logo-footer{
     background-color: var(--primary);
     color: #FFFFFF;
     border: none ;
-    filter: drop-shadow(0px 10px 25px rgba(16, 160, 160, 0.2));
+    filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.25));
+
 }
 
 .whatsapp-btn{
     background-color: #25D366;
     color: #FFFFFF;
     border: none ;
-    filter: drop-shadow(0px 10px 25px rgba(16, 160, 160, 0.2));
+    padding: 0 16px !important;
+    gap: 8px !important;
+    filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.25));
 }
 
 .whatsapp-btn:hover{
-background-color: #128C7E;;
+background-color: #128C7E;
+filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.4));
+
 }
 
 
