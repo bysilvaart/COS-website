@@ -357,6 +357,7 @@ section{
 .servicios>.item>p{
     font-weight: 700;
     color: var(--grey);
+    width: 100%;
 }
 
 .servicios .item p :after{
