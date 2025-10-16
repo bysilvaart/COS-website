@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 *{
     padding: 0;
@@ -346,17 +346,16 @@ section{
     gap: 15px;
     padding: 15px 10px 15px 20px;
     /* background-color: #D3F4F4; */
-    background-color: white;
+    background-color: var(--primary);
     width: 100%;
     border-radius: 15px;
     box-shadow: 0px 6px 15px rgba(16, 160, 160, 0.15);
     
 }
 
-
 .servicios>.item>p{
     font-weight: 700;
-    color: var(--grey);
+    color: #fff;
     width: 100%;
 }
 
@@ -365,9 +364,9 @@ section{
 }
 
 
-
-.servicios .item img{
+.servicios .item img, .servicios .item svg {
     width: 60px;
+    fill: #fff;
 }
 
 .nosotros{
@@ -431,23 +430,28 @@ section{
     gap: 4px;
 }
 
+.atendidos h3{
+    color: var(--primary);
+    font-size: 32px;
+    line-height: 32px;
+}
+
+
+.atendidos h4{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--grey);
+}
+
+
 .atendidos p{
     color: var(--primary);
-    line-height: 16px;
-}
-
-.atendidos h2{
-    font-size: 40px;
-    line-height: 32px;
-    color: var(--grey);
-}
-
-.atendidos h3{
+    font-weight: 600;
     font-size: 20px;
-    font-weight: 700;
-    line-height: 18px;
-    color: var(--grey);
+    line-height: 24px;
 }
+
 
 .items-container{
     display: flex;
@@ -539,9 +543,19 @@ footer{
 
 }
 
+footer .logos-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 footer .logo-footer{
-    height: 70px;
+    height: 60px;
     
+}
+
+footer .logo-sanitaria{
+    height: 90px;
 }
 
 .social-media__container{
