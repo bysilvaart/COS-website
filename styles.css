@@ -111,7 +111,7 @@ p{
 }
 
 .navbar.sticky .btn{
-    height: 32px;
+    height: 44px;
     transition: 0.6s;
 
 }
@@ -566,11 +566,21 @@ footer .logo-sanitaria{
     gap: 40px;
 }
 
+.social-media__container .detalle{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media__container .detalle img{
+    height: 80px;
+    padding-top: 8px;
+}
+
 .follow-us__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 20px;
 }
 
@@ -904,10 +914,15 @@ filter: drop-shadow(0px 7px 25px rgba(0, 0, 0, 0.3));
         place-content: center;
         width: 100%;
         padding: 10px;
-        /* background-color: white; */
         position: fixed;
         bottom: 0;
         left: 0;
+    }
+
+    .boton-agendar .btn{
+        height: 56px;
+        border-radius: 16px;
+        width: 300px;
     }
 
     .icon_chevron-left, .icon_chevron-right{
