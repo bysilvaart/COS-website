@@ -146,56 +146,56 @@
             <h2>Nuestros servicios</h2>
             <div class="servicios">
 
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Campo%20Visual%20Computarizado%22" target="_blank">
+                <a class="item" data-service="Campimetría Computarizada">
                     <img src="img/eye.svg" alt="">
                     <p>Campimetría Computarizada</p>
                     <img src="img/chevron-right.svg" alt="">
                 </a>
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22OCT%20(Tomograf%C3%ADa%20de%20coherencia%20%C3%B3ptica)%22" target="_blank">
+                <a class="item" data-service="Tomografía Coherencia Óptica">
                     <img src="img/eye.svg" alt="">
                     <p>Tomografía Coherencia Óptica</p>
                     <img src="img/chevron-right.svg" alt="">
 
                 </a>
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Paquimetr%C3%ADa%20Corneal%22" target="_blank">
+                <a class="item" data-service="Ecobiometría con Calculo de Lente Intraocular">
                     <img src="img/eye.svg" alt="">
                     <p>Ecobiometría con Calculo de Lente Intraocular</p>
                     <img src="img/chevron-right.svg" alt="">
 
                 </a>
 
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Tonometr%C3%ADa%20Aplan%C3%A1tica%22" target="_blank">
+                <a class="item" data-service="Paquimetria Ultrasónica">
                     <img src="img/eye.svg" alt="">
                     <p>Paquimetria Ultrasónica</p>
                     <img src="img/chevron-right.svg" alt="">
 
                 </a>
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Curva%20de%20Tensi%C3%B3n%20(CTA)%22" target="_blank">
+                <a class="item" data-service="Curva de Tensión Aplanática">
                     <img src="img/eye.svg" alt="">
                     <p>Curva de Tensión Aplanática</p>
                     <img src="img/chevron-right.svg" alt="">
 
                 </a>
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Test%20de%20Schirmer%22" target="_blank">
+                <a class="item" data-service="Topografía Corneal Computarizada">
                     <img src="img/eye.svg" alt="">
                     <p>Topografía Corneal Computarizada</p>
                     <img src="img/chevron-right.svg" alt="">
 
                 </a>
 
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Estudio%20de%20Estrabismo%22" target="_blank">
+                <a class="item" data-service="Microscopía Especular">
                     <img src="img/eye.svg" alt="">
                     <p>Microscopía Especular</p>
                     <img src="img/chevron-right.svg" alt="">
 
                 </a>
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Tratamiento%20Ort%C3%B3ptico%22" target="_blank">
+                <a class="item" data-service="Tratamiento Ortoptico y/o Pleóptico">
                     <img src="img/eye.svg" alt="">
                     <p>Tratamiento Ortoptico y/o Pleóptico</p>
                     <img src="img/chevron-right.svg" alt="">
 
                 </a>
-                <a class="item" href="https://api.whatsapp.com/send?phone=+56957716313&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20servicios%20de%20%22Prueba%20Provocaci%C3%B3n%20de%20Glaucoma%22" target="_blank">
+                <a class="item" data-service="Exploración Sensomotora: Estrabismo">
                     <img src="img/eye.svg" alt="">
                     <p>Exploración Sensomotora: Estrabismo</p>
                     <img src="img/chevron-right.svg" alt="">
@@ -292,6 +292,23 @@
     </div>
 
     <script type="text/javascript">
+       // const PHONE = '+56957716313'; // mantiene +56 (el + se codifica)
+        const PHONE = '+56968545573'; // mantiene +56 (el + se codifica)
+        const TEMPLATE = 'Hola, me gustaría saber más sobre los servicios de "{service}"';
+
+        function buildWAUrl(service){
+            const u = new URL('https://api.whatsapp.com/send');
+            u.searchParams.set('phone', PHONE); // + → %2B (correcto)
+            u.searchParams.set('text', TEMPLATE.replace('{service}', service));
+            return u.toString();
+        }
+
+        document.querySelectorAll('.item').forEach(a => {
+            const service = a.dataset.service || a.textContent.trim();
+            a.href = buildWAUrl(service);
+            a.target = '_blank';
+            a.rel = 'noopener';
+        });
         // NAVBAR RESPONSIVE //
         function myFunction() {
           var x = document.getElementById("myNavbar");
