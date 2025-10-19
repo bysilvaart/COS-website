@@ -292,8 +292,9 @@
     </div>
 
     <script type="text/javascript">
-       // const PHONE = '+56957716313'; // mantiene +56 (el + se codifica)
-        const PHONE = '+56968545573'; // mantiene +56 (el + se codifica)
+
+        // WHATSAPP LINKS //
+        const PHONE = '+56957716313';
         const TEMPLATE = 'Hola, me gustaría saber más sobre los servicios de "{service}"';
 
         function buildWAUrl(service){
@@ -309,6 +310,8 @@
             a.target = '_blank';
             a.rel = 'noopener';
         });
+        // FIN WHATSAPP LINKS //
+
         // NAVBAR RESPONSIVE //
         function myFunction() {
           var x = document.getElementById("myNavbar");
@@ -320,12 +323,14 @@
         }
         // FIN NAVBAR RESPONSIVE //
 
+        // STICKY HEADER //
         window.addEventListener("scroll", function(){
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0)
         })
-
-
+        // FIN STICKY HEADER //
+        
+        // SLIDER //
         var slideIndex = 1;
         showDivs(slideIndex);
 
@@ -343,7 +348,7 @@
         }
         x[slideIndex-1].style.display = "flex";
         }
-
+        // FIN SLIDER //
     </script>
 
 </body>
